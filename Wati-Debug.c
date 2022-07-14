@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Wati-Main.c                                        :+:      :+:    :+:   */
+/*   Wati-Debug.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 19:54:42 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 17:41:37 by tschlege         ###   ########lyon.fr   */
+/*   Created: 2022/07/14 15:17:16 by tschlege          #+#    #+#             */
+/*   Updated: 2022/07/14 16:00:31 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Wati_PushSwap.h"
 
-void	wati_exit(char *str, int choice)
+void	print_stacks(t_stack *stack)
 {
-	if (choice)
+	int	i;
+
+	i = 0;
+	printf("\n");
+	while (i < stack->element_a)
 	{
-		write(2, "Error\n", 6);
-		exit(EXIT_FAILURE);
+		printf("%d %d\n", stack->stack_a[i], stack->stack_b[i]);
+		i++;
 	}
-	exit(EXIT_SUCCESS);
+	printf("\n");
 }
 
-int	main(int argc, char *argv[])
+void	debug(t_stack *stack)
 {
-	t_stack	stack;
-
-	stack.stack_a = NULL;
-	stack.stack_b = NULL;
-	stack.element_a = argc - 1;
-	stack.element_b = 0;
-	stack.counter = 0;
-	if (argc < 2)
-		wati_exit("argc!", 42);
-	wati_parser(argv, &stack);
+	print_stacks(stack);
+	printf("\nA Hardcode_sorted in %d shots\n", stack->counter);
 }

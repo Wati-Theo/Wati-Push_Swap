@@ -38,6 +38,5 @@ void	radix(t_stack *stack)
 		while (stack->element_b)
 			wati_pa(stack);
 	}
-	// debug(stack);
 } 
  

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Wati-Utilis.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Wati-Theo <wati-theo@protonmail.com>       +#+  +:+       +#+        */
+/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 16:59:39 by tschlege          #+#    #+#             */
-/*   Updated: 2022/06/24 10:58:42 by Wati-Theo        ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 15:53:14 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
