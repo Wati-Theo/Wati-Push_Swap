@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 19:54:42 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 17:41:37 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 20:25:58 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int	main(int argc, char *argv[])
 	stack.element_b = 0;
 	stack.counter = 0;
 	if (argc < 2)
-		wati_exit("argc!", 42);
+		wati_exit("argc!", 0);
 	wati_parser(argv, &stack);
 }

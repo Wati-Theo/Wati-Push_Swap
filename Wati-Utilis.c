@@ -6,17 +6,17 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 16:59:39 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 15:53:14 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 20:35:47 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Wati_PushSwap.h"
 
-int	ft_atoi(const char *str)
+long long int	ft_atoi(const char *str)
 {
-	int	i;
-	int	res;
-	int	neg;
+	int				i;
+	long long int	res;
+	int				neg;
 
 	i = 0;
 	res = 0;

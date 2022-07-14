@@ -12,7 +12,6 @@
 
 #include "Wati_PushSwap.h"
 
-
 void	radix(t_stack *stack)
 {
 	int	i;
@@ -38,5 +37,4 @@ void	radix(t_stack *stack)
 		while (stack->element_b)
 			wati_pa(stack);
 	}
-} 
- 
+}

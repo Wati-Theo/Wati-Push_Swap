@@ -6,11 +6,25 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 17:12:37 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 15:08:58 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 20:45:19 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Wati_PushSwap.h"
+
+void	check_if_int(char **argv, t_stack *stack)
+{
+	int	i;
+
+	i = 1;
+	while (i <= stack->element_a)
+	{
+		if (ft_atoi(argv[i]) > 2147483647 || ft_atoi(argv[i]) < -2147483648)
+			wati_exit(">INT_MAX", 696);
+		i++;
+	}
+	ft_putnbr_to_stack_a(argv, stack);
+}
 
 void	check_if_doubled(char **argv, t_stack *stack)
 {
@@ -29,7 +43,7 @@ void	check_if_doubled(char **argv, t_stack *stack)
 		}
 		j++;
 	}
-	ft_putnbr_to_stack_a(argv, stack);
+	check_if_int(argv, stack);
 }
 
 void	check_if_digit(char **argv, t_stack *stack)

@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:27:40 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 18:23:25 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 20:18:39 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	wati_sa(t_stack *stack)
 	stack->counter++;
 	ft_putstr_fd("sa\n", 1);
 	return (1);
-
 }
 
 int	wati_sb(t_stack *stack)
