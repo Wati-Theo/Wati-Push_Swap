@@ -93,7 +93,7 @@ void	ra_first(int rotation, t_stack *stack)
 	}
 }
 
-void	go_to(int index, t_stack *stack)
+void	go_to(t_stack *stack)
 {
 	if (where_i_go(stack) == -42)
 		wati_pa(stack);
@@ -114,22 +114,30 @@ void	go_to(int index, t_stack *stack)
 
 void	hardcode_sort(t_stack *stack)
 {
+	int	size;
+
+	size = stack->element_a;
 	if (stack->element_a == 5)
 	{
 		wati_pb(stack);
 		wati_pb(stack);
 	}
 	else if (stack->element_a == 4)
+	{
 		wati_pb(stack);
+	}	
 	else if (stack->element_a == 2)
 		wati_sa(stack);
 	if (!a_is_sorted(stack))
 		hardcode_sort_3_nbr(stack);
-	if (one_shot_action(stack) == -2)
+	if (size == 5)
 	{
-		while (stack->element_b)
-		{
-			go_to(where_i_go(stack), stack);
-		}
+		if (one_shot_action(stack) == -2)
+			while (stack->element_b)
+				go_to(stack);
 	}
+	else
+		while (stack->element_b)
+			go_to(stack);
+	// debug(stack);
 }

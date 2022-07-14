@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 17:12:37 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 20:45:19 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 21:23:39 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check_if_int(char **argv, t_stack *stack)
 	while (i <= stack->element_a)
 	{
 		if (ft_atoi(argv[i]) > 2147483647 || ft_atoi(argv[i]) < -2147483648)
-			wati_exit(">INT_MAX", 696);
+			wati_exit(696);
 		i++;
 	}
 	ft_putnbr_to_stack_a(argv, stack);
@@ -38,7 +38,7 @@ void	check_if_doubled(char **argv, t_stack *stack)
 		while (i <= stack->element_a)
 		{
 			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
-				wati_exit("check_if_doubled", 54);
+				wati_exit(54);
 			i++;
 		}
 		j++;
@@ -58,11 +58,11 @@ void	check_if_digit(char **argv, t_stack *stack)
 		while (argv[j][i])
 		{
 			if (argv[j][i] == '-' && !ft_isdigit(argv[j][i + 1]))
-				wati_exit("check_if_digit", 69);
+				wati_exit(69);
 			else if (argv[j][i] == '-' && ft_isdigit(argv[j][i + 1]))
 				i++;
 			if (!ft_isdigit(argv[j][i]))
-				wati_exit("check_if_digit", 57);
+				wati_exit(57);
 			i++;
 		}
 		j++;

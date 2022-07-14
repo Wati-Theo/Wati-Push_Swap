@@ -6,13 +6,13 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 19:54:42 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 20:25:58 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 21:23:24 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Wati_PushSwap.h"
 
-void	wati_exit(char *str, int choice)
+void	wati_exit(int choice)
 {
 	if (choice)
 	{
@@ -32,6 +32,7 @@ int	main(int argc, char *argv[])
 	stack.element_b = 0;
 	stack.counter = 0;
 	if (argc < 2)
-		wati_exit("argc!", 0);
+		wati_exit(0);
 	wati_parser(argv, &stack);
+	return (0);
 }

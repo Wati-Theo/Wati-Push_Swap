@@ -43,7 +43,7 @@ void	ft_putnbr_to_stack_a(char **argv, t_stack *stack)
 		i++;
 	}
 	if (a_is_sorted(stack))
-		wati_exit("A is sorted\n", 0);
+		wati_exit(0);
 	if (stack->element_a < 6)
 		hardcode_sort(stack);
 	radix(stack);
