@@ -55,44 +55,6 @@ int	where_i_go(t_stack *stack)
 	return (i);
 }
 
-void	rra_first(int rotation, t_stack *stack)
-{
-	int	i;
-
-	i = rotation;
-	while (i)
-	{
-		wati_rra(stack);
-		i--;
-	}
-	wati_pa(stack);
-	i = rotation + 1;
-	while (i)
-	{
-		wati_ra(stack);
-		i--;
-	}
-}
-
-void	ra_first(int rotation, t_stack *stack)
-{
-	int	i;
-
-	i = rotation;
-	while (i)
-	{
-		wati_ra(stack);
-		i--;
-	}
-	wati_pa(stack);
-	i = rotation;
-	while (i)
-	{
-		wati_rra(stack);
-		i--;
-	}
-}
-
 void	go_to(t_stack *stack)
 {
 	if (where_i_go(stack) == -42)
@@ -139,5 +101,4 @@ void	hardcode_sort(t_stack *stack)
 	else
 		while (stack->element_b)
 			go_to(stack);
-	// debug(stack);
 }

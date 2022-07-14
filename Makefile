@@ -1,7 +1,7 @@
 SRCFILES=	Wati-Main.c	\
-			Wati-Debug.c \
-			Wati-Hardcode_sort.c \
-			Wati-One_Shot_sort.c\
+			Wati-Hardcode_sort_prt1.c \
+			Wati-Hardcode_sort_prt2.c \
+			Wati-One_Shot_sort.c \
 			Wati-Parsing.c \
 			Wati-Radix.c \
 			Wati-Stack.c \

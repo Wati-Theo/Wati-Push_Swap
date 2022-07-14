@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 19:57:05 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 21:30:50 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/07/14 23:46:07 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void			hardcode_sort(t_stack *stack);
 int				a_is_sorted(t_stack *stack);
 void			radix(t_stack *stack);
 int				one_shot_action(t_stack *stack);
+void			rra_first(int rotation, t_stack *stack);
+void			ra_first(int rotation, t_stack *stack);
 /*
 ** Wati Stacks Actions 
 */
@@ -52,9 +54,4 @@ int				wati_rrb(t_stack *stack);
 void			wati_rrr(t_stack *stack);
 int				wati_pa(t_stack *stack);
 int				wati_pb(t_stack *stack);
-/*
-** for tests 
-*/
-void			print_stacks(t_stack *stack);
-void			debug(t_stack *stack);
 #endif

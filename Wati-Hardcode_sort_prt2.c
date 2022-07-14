@@ -1,33 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Wati-Debug.c                                       :+:      :+:    :+:   */
+/*   Wati-Hardcode_sort_prt2.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 15:17:16 by tschlege          #+#    #+#             */
-/*   Updated: 2022/07/14 16:00:31 by tschlege         ###   ########lyon.fr   */
+/*   Created: 2022/07/14 23:43:59 by tschlege          #+#    #+#             */
+/*   Updated: 2022/07/14 23:46:27 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Wati_PushSwap.h"
 
-void	print_stacks(t_stack *stack)
+void	rra_first(int rotation, t_stack *stack)
 {
 	int	i;
 
-	i = 0;
-	printf("\n");
-	while (i < stack->element_a)
+	i = rotation;
+	while (i)
 	{
-		printf("%d %d\n", stack->stack_a[i], stack->stack_b[i]);
-		i++;
+		wati_rra(stack);
+		i--;
 	}
-	printf("\n");
+	wati_pa(stack);
+	i = rotation + 1;
+	while (i)
+	{
+		wati_ra(stack);
+		i--;
+	}
 }
 
-void	debug(t_stack *stack)
+void	ra_first(int rotation, t_stack *stack)
 {
-	print_stacks(stack);
-	printf("\nA Hardcode_sorted in %d shots\n", stack->counter);
+	int	i;
+
+	i = rotation;
+	while (i)
+	{
+		wati_ra(stack);
+		i--;
+	}
+	wati_pa(stack);
+	i = rotation;
+	while (i)
+	{
+		wati_rra(stack);
+		i--;
+	}
 }
